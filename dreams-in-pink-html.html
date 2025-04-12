@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dreams in Pink</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💗 DREAMS IN PINK 💗</h1>
+    <h3>By Gabriela Gonzalez</h3>
+
+    <div class="filtro-container">
+      <label for="categoria">Filtrar por categoría:</label>
+      <select id="categoria" onchange="filtrarPorCategoria()">
+        <option value="todos">Todos</option>
+        <option value="Satín">Satín</option>
+        <option value="Algodón">Algodón</option>
+        <option value="Hombre">Hombre</option>
+      </select>
+    </div>
+
+    <div id="productos"></div>
+
+    <div class="carrito">
+      <h2>🧾 Carrito de Compras</h2>
+      <ul id="lista-carrito"></ul>
+      <p><strong>Total de productos: <span id="cantidad">0</span></strong></p>
+      <p><strong>Total a pagar: $<span id="total">0.00</span></strong></p>
+      
+      <div class="carrito-buttons">
+        <button class="vaciar" onclick="vaciarCarrito()">🧼 Vaciar Carrito</button>
+        <button class="finalizar" onclick="finalizarCompra()">✅ Finalizar Compra</button>
+      </div>
+      
+      <div id="paypal-button-container"></div>
+    </div>
+  </div>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+  <script src="productos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
